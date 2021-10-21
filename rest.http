@@ -1,0 +1,23 @@
+GET http://localhost:3000/home
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MzQ4MjUzNDAsImV4cCI6MTYzNDgyODk0MCwiYXVkIjoiNjE3MTczMmRjZDY2NGQ5NDRjNTRkNWMxIiwiaXNzIjoicGlja3VycGFnZS5jb20ifQ.qZetVE2jrN4sY7_3aVZlmTUyy7G21J3MgbU2t3FaEZw
+
+###Login Route
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "email": "yushsingla@gmail.com",
+  "password": "Test@123"
+}
+
+
+###signup Route
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+  "email": "yushsingla@gmail.com",
+  "password": "Test@123",
+  "name": "Yush Singla"
+}
+
