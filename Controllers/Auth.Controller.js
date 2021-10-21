@@ -29,9 +29,8 @@ module.exports = {
 
       const isMatch = await user.isValidPassword(result.password);
       if (!isMatch) throw createError.Unauthorized("Username/password not valid");
-
       const accessToken = await signAccessToken(user.id);
-      res.send({ accessToken });
+      res.send({ accessToken, email: user.email, name: user.name });
     } catch (error) {
       if (error.isJoi === true) return next(createError.BadRequest("Invalid Username/Password"));
       next(error);
